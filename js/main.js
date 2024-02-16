@@ -11,9 +11,9 @@ closeMobileItems.forEach(((element) => element.addEventListener('click', closeMo
 /* Project Detail objects */
 const projectDetail = [{
   title: 'JouzuJapanese',
-  exprience: ['Personal Project', '', '2023'],
-  desription: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-  popDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+  exprience: ['Personal Project', '2023'],
+  desription: 'Web Application Designed to help beginner Japanese language students with useful practices such as hiragana, katakana, and conjugation training.',
+  popDescription: 'Web Application Designed to help beginner Japanese language students with useful practices such as hiragana, katakana, and conjugation training.',
   technologies: ['html', 'css', 'javaScript', 'github', 'react', 'java', 'Spring Boot'],
   popupTech: ['html', 'css', 'javaScript', 'github', 'react', 'java', 'Spring Boot'],
   image: './images/Jouzu.png',
@@ -21,21 +21,21 @@ const projectDetail = [{
   imagePopup: './images/Jouzu.png',
   imageMobilePopup: './images/Jouzu.png',
   seeLive: 'https://tariktesfa.github.io/My-portfolio/',
-  seeSource: 'https://github.com/tariktesfa/My-portfolio',
+  seeSource: 'https://github.com/BlueBearon/JouzuJapanese',
 },
 {
   title: 'MELT: Mutation Framework for the Evaluation of Licensing Tools',
   exprience: ['CSCI 435: Software Engineering', 'Project Member', '2023'],
-  desription: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-  popDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  technologies: ['python', 'PyQt6'],
-  popupTech: ['python', 'PyQt6'],
+  desription: 'MELT is a mutation framework that can systematically introduce licensing bugs into otherwise compliant projects. The mutation framework can then be used to comprehensively evaluate tooling solutions.',
+  popDescription: 'MELT is a mutation framework that can systematically introduce licensing bugs into otherwise compliant projects. The mutation framework can then be used to comprehensively evaluate tooling solutions.',
+  technologies: ['python', 'PyQt6', 'github'],
+  popupTech: ['python', 'PyQt6', 'github'],
   image: './images/MELT.png',
   imageMobile: './images/MELT.png',
   imagePopup: './images/MELT.png',
   imageMobilePopup: './images/MELT.png',
   seeLive: 'https://tariktesfa.github.io/My-portfolio/',
-  seeSource: 'https://github.com/tariktesfa/My-portfolio',
+  seeSource: '',
 }
 ];
 /* End of project detail object */
@@ -55,8 +55,8 @@ for (let i = 0; i < projectDetail.length; i += 1) {
   }
   document.querySelector('#portfolio').innerHTML += `<div class="main-container">
   <div class="grid-item" id="work-1">
-    <div class="flex-item1"><img src="${projectDetail[i].imageMobile}" alt="my tonic project"></div>
-    <div class="desk-item1"><img src="${projectDetail[i].image}" alt="my tonic project"></div>
+    <div class="flex-item1"><img src="${projectDetail[i].imageMobile}" class="flex-item1" alt="my tonic project"></div>
+    <div class="desk-item1"><img src="${projectDetail[i].image}" class="desk-item1" alt="my tonic project"></div>
     <div class="desk-col">
       <div class="flex-item2">
         <h2>${projectDetail[i].title}</h2>
@@ -131,9 +131,6 @@ const displayPopupModal = (i) => {
               ${techPop}
               </ul>
               <div class="btn-tags">
-                <a href="${projectDetail[i].seeLive}" class="btn-see-project">See Live
-                  <i class="fa fa-external-link" aria-hidden="true"></i>
-                </a>
                 <a href="${projectDetail[i].seeSource}" class="btn-see-project">See Source
                   <i class="fa fa-github-square" aria-hidden="true"></i>
                 </a>
@@ -183,3 +180,4 @@ document.querySelector('#form').addEventListener('submit', (e) => {
   }
 });
 /* End of Contact Form Validation */
+
