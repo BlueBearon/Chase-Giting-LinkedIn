@@ -20,7 +20,7 @@ const projectDetail = [{
   imageMobile: './images/Jouzu.png',
   imagePopup: './images/Jouzu.png',
   imageMobilePopup: './images/Jouzu.png',
-  seeLive: 'https://tariktesfa.github.io/My-portfolio/',
+  seeLive: 'https://jouzujapanese.netlify.app/',
   seeSource: 'https://github.com/BlueBearon/JouzuJapanese',
 },
 {
@@ -34,7 +34,7 @@ const projectDetail = [{
   imageMobile: './images/MELT.png',
   imagePopup: './images/MELT.png',
   imageMobilePopup: './images/MELT.png',
-  seeLive: 'https://tariktesfa.github.io/My-portfolio/',
+  seeLive: '',
   seeSource: '',
 }
 ];
@@ -131,6 +131,9 @@ const displayPopupModal = (i) => {
               ${techPop}
               </ul>
               <div class="btn-tags">
+                 <a href="${projectDetail[i].seeLive}" class="btn-see-project">See Live
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                 </a>
                 <a href="${projectDetail[i].seeSource}" class="btn-see-project">See Source
                   <i class="fa fa-github-square" aria-hidden="true"></i>
                 </a>
